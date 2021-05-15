@@ -1,9 +1,10 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import Interest from '../../components/Interest';
+import apiMock from '../../__mocks__/apiMock';
 
 describe('<Interest />', () => {
-  const interest = mount(<Interest />);
+  const interest = mount(<Interest content={apiMock.interest} />);
 
   test('Interest render', () => {
     expect(interest.length).toEqual(1);

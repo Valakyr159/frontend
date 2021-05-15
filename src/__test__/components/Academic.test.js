@@ -1,9 +1,10 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import Academic from '../../components/Academic';
+import apiMock from '../../__mocks__/apiMock';
 
 describe('<Academic />', () => {
-  const academic = mount(<Academic />);
+  const academic = mount(<Academic content={apiMock.academic} />);
 
   test('Academic render', () => {
     expect(academic.length).toEqual(1);

@@ -1,9 +1,10 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import Profile from '../../components/Profile';
+import apiMock from '../../__mocks__/apiMock';
 
 describe('<Profile />', () => {
-  const profile = mount(<Profile />);
+  const profile = mount(<Profile content={apiMock.profile} />);
 
   test('Profile render', () => {
     expect(profile.length).toEqual(1);
